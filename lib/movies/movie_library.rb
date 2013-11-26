@@ -11,7 +11,7 @@ module Movies
     end
 
     def all
-      movies
+      movies.dup
     end
 
     def all_movies_published_by_pixar

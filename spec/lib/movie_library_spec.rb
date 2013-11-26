@@ -30,6 +30,14 @@ describe 'general movie functionality' do
   Given(:movies){ [] }
   Given(:sut) { ::Movies::MovieLibrary.new(movies) }
 
+  describe 'Retrieving all of the movies should not return the original set of movies' do 
+    When(:result) { sut.all }
+
+    Then do
+      result.object_id != movies.object_id 
+    end
+  end
+
   describe 'Can return a list of all of its movies' do
     Given(:first_movie) { create_movie }
     Given(:second_movie) { create_movie }
