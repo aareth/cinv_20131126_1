@@ -3,6 +3,10 @@ module Movies
     include Initializer
 
     initializer :name
+
+    def to_s
+      name
+    end
   end
 
   module Studios

@@ -5,7 +5,7 @@ module Movies
     initializer :name
 
     def to_s
-      @name
+      name
     end
   end
 

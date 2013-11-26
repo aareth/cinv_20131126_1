@@ -17,5 +17,9 @@ module Movies
     def to_s
       "#{title}"
     end
+
+    def ==(other)
+      other.title == title
+    end
   end
 end
