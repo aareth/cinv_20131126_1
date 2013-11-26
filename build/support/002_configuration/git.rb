@@ -1,7 +1,7 @@
 configs ={
   :git => {
     :user => 'developwithpassion',
-    :remotes => %w/dwp/,
+    :remotes => %w/aareth/,
     :repo => 'cinv_20131126_1' 
   }
 }
