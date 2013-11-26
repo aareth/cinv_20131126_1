@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require_relative 'git_utils.rb'
+
+@remote_repo = "cinv_20131126_1"
+
+def install_utilities
+  `bundle install`
+end
+
+def configure_remote
+  run_git_command('remote rm jp')
+  run_git_command("remote add jp http://github.com/developwithpassion/#{@remote_repo}.git")
+end
+
+def create_first_branches
+  %w[clean master starting_point master starting_point].each{|branch| checkout(branch)}
+end
+
+install_utilities
+configure_remote
+create_first_branches

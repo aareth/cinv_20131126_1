@@ -1,0 +1,4 @@
+.rvmrc
+local_gems
+.ruby-*
+Gemfile.lock

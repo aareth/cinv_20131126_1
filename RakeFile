@@ -1,0 +1,15 @@
+require 'rake'
+require 'rake/clean'
+require 'fileutils'
+require 'configatron'
+
+Dir.glob("build/support/**/*.rb").each do|item|
+  require File.expand_path(item)
+end
+
+[configatron.artifacts_dir, configatron.specs.dir].each do |item|
+  CLEAN.include(item)
+end
+
+task :default => ["git:candidates"]
+
